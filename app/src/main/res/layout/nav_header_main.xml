@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@color/cardview_dark_background"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <include
+        layout="@layout/activity_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <!--REFERENCE accessed 02/05/20-->
+    <!--https://www.skcript.com/svr/how-to-make-a-circular-image-view-in-android-without-third-party-library/ -->
+    <!-- Used to learn how to put profile pic in circle-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCardView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:cardCornerRadius="50dp">
+
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/profile_picture"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_default_profile_round" />
+
+    </androidx.cardview.widget.CardView>
+    <!--END REFERENCE-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/username_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:text="@string/new_user"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="@string/navigation"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
